@@ -15,7 +15,7 @@ CC	=	gcc
 
 EXEC	=	my_sudo
 
-CFLAGS	+=	-Wall -g3 -lncurses
+CFLAGS	+=	-Wall -g3 -lncurses -L./lib/my
 
 all:	${EXEC}
 
