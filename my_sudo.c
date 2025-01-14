@@ -6,8 +6,10 @@
 */
 
 #include "my.h"
+#include "my_sudo.h"
 
 int main(void)
 {
+    do_the_h();
     return 0;
 }

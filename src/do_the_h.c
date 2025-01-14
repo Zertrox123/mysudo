@@ -8,3 +8,11 @@
 #include <unistd.h>
 #include "my.h"
 
+int do_the_h(void)
+{
+    my_putstr("Usage : ./my_sudo");
+    my_putstr(" -h\n");
+    my_putstr("Usage : ./my_sudo");
+    my_putstr(" [-ugEs]");
+    my_putstr("[Command [args ...]]");
+}
