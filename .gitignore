@@ -1,0 +1,23 @@
+# Linked to C #
+*.a
+src/*.a
+lib/my/*.a
+lib/my/my_printf/*.a
+lib/my/my_printf/src/*.a
+*.o
+src/*.o
+lib/my/*.o
+lib/my/my_printf/*.o
+lib/my/my_printf/src/*.o
+
+# linked to lib #
+lib/my/libmy.a
+
+# linked to tek #
+
+# linked to the project #
+my_top
+
+# Linked to clion #
+.idea
+*.idea
