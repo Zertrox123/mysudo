@@ -9,5 +9,9 @@
     #define B_PSU_100_LYN_1_1_MYSUDO_ALEXIS_DRAGO_BELTRAN_MY_SUDO_H
 
 int do_the_h(void);
+int do_the_e(void);
+int do_the_g(void);
+int do_the_s(void);
+int do_the_u(void);
 
 #endif //B_PSU_100_LYN_1_1_MYSUDO_ALEXIS_DRAGO_BELTRAN_MY_SUDO_H
