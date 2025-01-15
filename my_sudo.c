@@ -8,8 +8,13 @@
 #include "my.h"
 #include "my_sudo.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
-    do_the_h();
+    for (int i = 1; i < argc; i++) {
+        if (my_strcmp(argv[i], "-h") == 0) {
+            do_the_h();
+            return 0;
+        }
+    }
     return 0;
 }

@@ -14,5 +14,5 @@ int do_the_h(void)
     my_putstr(" -h\n");
     my_putstr("Usage : ./my_sudo");
     my_putstr(" [-ugEs]");
-    my_putstr("[Command [args ...]]");
+    my_putstr("[Command [args ...]]\n");
 }
