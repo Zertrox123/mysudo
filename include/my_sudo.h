@@ -13,5 +13,6 @@ int do_the_e(void);
 int do_the_g(void);
 int do_the_s(void);
 int do_the_u(void);
+int basic_sudo(void);
 
 #endif //B_PSU_100_LYN_1_1_MYSUDO_ALEXIS_DRAGO_BELTRAN_MY_SUDO_H

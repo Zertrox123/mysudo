@@ -26,6 +26,18 @@ static int do_the_g_flag(void)
     return 0;
 }
 
+static int do_the_e_flag(void)
+{
+    do_the_e();
+    return 0;
+}
+
+static int do_the_s_flag(void)
+{
+    do_the_s();
+    return 0;
+}
+
 int main(int argc, char *argv[])
 {
     for (int i = 1; i < argc; i++) {
@@ -39,13 +51,12 @@ int main(int argc, char *argv[])
             do_the_g_flag();
         }
         if (my_strcmp(argv[i], "-E") == 0) {
-            do_the_e();
-            return 0;
+            do_the_e_flag();
         }
         if (my_strcmp(argv[i], "-s") == 0) {
-            do_the_s();
-            return 0;
+            do_the_s_flag();
         }
     }
+    basic_sudo();
     return 0;
 }
