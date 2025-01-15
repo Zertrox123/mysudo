@@ -8,6 +8,8 @@
 SRC	=	$(wildcard *.c)	\
 		$(wildcard lib/my/*.c)	\
 		$(wildcard src/*.c)	\
+		$(wildcard src/flags/*.c)	\
+		$(wildcard src/security/*.c)	\
 
 OBJ	=	$(SRC:.c=.o)
 
