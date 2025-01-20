@@ -10,13 +10,11 @@ int do_sudo_stuff(void)
     return 0;
 }
 
-
 int basic_sudo(char ac, char **av)
 {
     if (ac == 1) {
         return 84;
-    }
-    else {
+    } else {
         do_sudo_stuff();
     }
 }

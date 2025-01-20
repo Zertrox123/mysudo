@@ -24,13 +24,3 @@ static int incorrect_pswd(void)
     }
     return 0;
 }
-
-/*
-int hash_password(void)
-{
-    if () {
-        int_incorrect_pswd();
-    }
-    return 0;
-}
-*/

@@ -11,6 +11,7 @@
 int do_the_g(void)
 {
     gid_t gid = getgid();
+
     printf("Current Group ID: %d\n", gid);
     return 0;
 }
