@@ -9,17 +9,15 @@
 #include <crypt.h>
 #include <stdio.h>
 
-static int_incorrect_pswd(void)
+static int incorrect_pswd(void)
 {
-    int incorrect_counter = 0;
-
-    for (/*on sais que password incorrect, faut juste savoir si timeout*/) {
-        if (/*password incorrect*/) {
+    for (int i = 0; i < 3; i++) {
+        if (i < 3) {
             printf("Incorrect password.\n");
-            incorrect_counter + 1;
-            return incorrect_counter;
+            i + 1;
+            return i;
         }
-        if (incorrect_counter >= 3) {
+        if (i >= 3) {
             printf("Fuck off, looser");
             return 84;
         }
@@ -27,13 +25,12 @@ static int_incorrect_pswd(void)
     return 0;
 }
 
+/*
 int hash_password(void)
 {
-    /*on test le password*/
-    /*si bon on continue*/
-
     if () {
-        int_incorrect_pswd(); /*si il est mauvais on lance ce qui gere les mauvais mdp*/
+        int_incorrect_pswd();
     }
     return 0;
 }
+*/

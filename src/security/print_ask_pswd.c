@@ -6,9 +6,9 @@
 */
 
 #include "my.h"
-#include "my.sudo.h"
+#include "my_sudo.h"
 
 int ask_psswd(void)
 {
-    mini_printf("[my_sudo] password for user :")
+    mini_printf("[my_sudo] password for user :");
 }

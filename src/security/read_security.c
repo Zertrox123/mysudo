@@ -9,7 +9,5 @@
 
 int read_security(void)
 {
-    readdir(/etc/sudoers);
-    opendir(/etc/sudoers);
-
+    return 0;
 }

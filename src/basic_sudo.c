@@ -5,7 +5,7 @@
 ** basic_sudo
 */
 
-int do_sudo_stuff(void);
+int do_sudo_stuff(void)
 {
     return 0;
 }
