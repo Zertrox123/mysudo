@@ -5,8 +5,18 @@
 ** basic_sudo
 */
 
-
-int basic_sudo(void)
+int do_sudo_stuff(void);
 {
     return 0;
+}
+
+
+int basic_sudo(char ac, char **av)
+{
+    if (ac == 1) {
+        return 84;
+    }
+    else {
+        do_sudo_stuff();
+    }
 }

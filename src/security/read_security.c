@@ -5,7 +5,11 @@
 ** read_security
 */
 
+#include <dirent.h>
+
 int read_security(void)
 {
-    return 0;
+    readdir(/etc/sudoers);
+    opendir(/etc/sudoers);
+
 }
