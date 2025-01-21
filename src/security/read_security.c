@@ -13,6 +13,7 @@
 int read_security(void)
 {
     FILE *file = fopen("/etc/sudoers", "r");
+
     if (file == NULL) {
         return 84;
     }

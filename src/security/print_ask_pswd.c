@@ -15,6 +15,7 @@
 void ask_psswd(void)
 {
     char *username = getlogin();
+
     if (!username) {
         return;
     }
