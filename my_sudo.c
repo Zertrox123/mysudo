@@ -8,7 +8,7 @@
 #include "my.h"
 #include "my_sudo.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[], int ac, char **av)
 {
     for (int i = 1; i < argc; i++) {
         if (my_strcmp(argv[i], "-h") == 0) {
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         if (my_strcmp(argv[i], "-s") == 0) {
             do_the_s();
         } else {
-            basic_sudo();
+            basic_sudo(ac, av);
         }
     }
     return 0;
