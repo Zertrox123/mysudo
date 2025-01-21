@@ -25,4 +25,4 @@ RUN echo 'testuser ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER testuser
 WORKDIR /home/testuser
 
-CMD ["/bin/bash"]
+CMD ["/bin/zsh"]
