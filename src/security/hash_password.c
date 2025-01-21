@@ -15,5 +15,5 @@
 
 void mask_txt(char *password, size_t size)
 {
-    return 0;
+    return;
 }
