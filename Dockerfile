@@ -9,11 +9,18 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     make \
     vim \
-    sudo
+    sudo \
+    man \
+    less \
+    net-tools \
+    iputils-ping && \
+    apt-get clean
 
 RUN useradd -m -s /bin/bash testuser && \
     echo 'testuser:testpassword' | chpasswd && \
-    adduser testuser sudo
+    usermod -aG sudo testuser
+
+RUN echo 'testuser ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 USER testuser
 WORKDIR /home/testuser
