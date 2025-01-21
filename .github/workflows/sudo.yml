@@ -1,9 +1,12 @@
-name: my_sudo
+name: my_top
 
 on :
   push:
     branches-ignore:
       - "ga-ignore- *"
+
+env:
+  EXECUTABLES: "illegal"
 
 jobs:
   checking_coding_style:
@@ -21,3 +24,18 @@ jobs:
           if [ -s $input ]; then
             exit 1
           fi
+
+  check_program_compilation:
+    runs-on: ubuntu-latest
+    needs: checking_coding_style
+    container:
+      image: epitechcontent/epitest-docker:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Is Make Woking
+        run: make
+        timeout-minutes: 2
+      - name: Clean useless files
+        run: make clean
+        timeout-minutes: 1
