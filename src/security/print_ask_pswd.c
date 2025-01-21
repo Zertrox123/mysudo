@@ -11,5 +11,4 @@
 void ask_psswd(void)
 {
     mini_printf("[my_sudo] password for user :");
-    read_pswd();
 }

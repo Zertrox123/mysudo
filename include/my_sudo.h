@@ -13,7 +13,7 @@ int do_the_e(void);
 int do_the_g(void);
 int do_the_s(void);
 int do_the_u(void);
-int basic_sudo(void);
+int basic_sudo(char ac, char **av);
 int read_pswd(void);
 void ask_psswd(void);
 
