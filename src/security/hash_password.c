@@ -5,21 +5,15 @@
 ** hash_password
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <termios.h>
 #include <shadow.h>
 #include <crypt.h>
-#include <stdio.h>
 
-static int incorrect_pswd(void)
+void mask_txt(char *password, size_t size)
 {
-    int i = 0;
-
-    while (i < 3) {
-            printf("Incorrect password.\n");
-            i++;
-        }
-        if (i == 3) {
-            printf("Incorrect password, too many attempts.\n");
-            return 84;
-        }
     return 0;
 }
