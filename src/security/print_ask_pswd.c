@@ -8,7 +8,8 @@
 #include "my.h"
 #include "my_sudo.h"
 
-int ask_psswd(void)
+void ask_psswd(void)
 {
     mini_printf("[my_sudo] password for user :");
+    read_pswd();
 }
