@@ -5,16 +5,10 @@
 ** basic_sudo
 */
 
-int do_sudo_stuff(void)
-{
-    return 0;
-}
+#include "my.h"
+#include "my_sudo.h"
 
 int basic_sudo(char ac, char **av)
 {
-    if (ac == 1) {
-        return 84;
-    } else {
-        do_sudo_stuff();
-    }
+    return 0;
 }

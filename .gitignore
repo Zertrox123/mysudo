@@ -16,8 +16,7 @@ lib/my/libmy.a
 # linked to tek #
 
 # linked to the project #
-my_top
-
+my_sudo
 # Linked to clion #
 .idea
 *.idea

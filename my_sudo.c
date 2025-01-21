@@ -25,8 +25,9 @@ int main(int argc, char *argv[])
         }
         if (my_strcmp(argv[i], "-s") == 0) {
             do_the_s();
+        } else {
+            basic_sudo();
         }
     }
-    basic_sudo();
     return 0;
 }
