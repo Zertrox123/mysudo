@@ -8,53 +8,23 @@
 #include "my.h"
 #include "my_sudo.h"
 
-static int do_the_h_flag(void)
-{
-    do_the_h();
-    return 0;
-}
-
-static int do_the_u_flag(void)
-{
-    do_the_u();
-    return 0;
-}
-
-static int do_the_g_flag(void)
-{
-    do_the_g();
-    return 0;
-}
-
-static int do_the_e_flag(void)
-{
-    do_the_e();
-    return 0;
-}
-
-static int do_the_s_flag(void)
-{
-    do_the_s();
-    return 0;
-}
-
 int main(int argc, char *argv[])
 {
     for (int i = 1; i < argc; i++) {
         if (my_strcmp(argv[i], "-h") == 0) {
-            do_the_h_flag();
+            do_the_h();
         }
         if (my_strcmp(argv[i], "-u") == 0) {
-            do_the_u_flag();
+            do_the_u();
         }
         if (my_strcmp(argv[i], "-g") == 0) {
-            do_the_g_flag();
+            do_the_g();
         }
         if (my_strcmp(argv[i], "-E") == 0) {
-            do_the_e_flag();
+            do_the_e();
         }
         if (my_strcmp(argv[i], "-s") == 0) {
-            do_the_s_flag();
+            do_the_s();
         }
     }
     basic_sudo();
