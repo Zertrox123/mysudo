@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     make \
     vim \
-    sudo \
-    wget \
+    sudo
 
 RUN useradd -m -s /bin/bash testuser && \
     echo 'testuser:testpassword' | chpasswd && \

@@ -18,7 +18,7 @@ static int incorrect_pswd(void)
             i++;
         }
         if (i == 3) {
-            printf("Fuck off, looser");
+            printf("Incorrect password, too many attempts.\n");
             return 84;
         }
     return 0;

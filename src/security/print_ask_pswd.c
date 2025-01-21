@@ -1,0 +1,14 @@
+/*
+** EPITECH PROJECT, 2025
+** B-PSU-100-LYN-1-1-mysudo-alexis.drago-beltran
+** File description:
+** print_ask_pswd
+*/
+
+#include "my.h"
+#include "my_sudo.h"
+
+int ask_psswd(void)
+{
+    mini_printf("[my_sudo] password for user :");
+}
