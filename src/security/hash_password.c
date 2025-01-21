@@ -11,16 +11,15 @@
 
 static int incorrect_pswd(void)
 {
-    for (int i = 0; i < 3; i++) {
-        if (i < 3) {
+    int i = 0;
+
+    while (i < 3) {
             printf("Incorrect password.\n");
-            i + 1;
-            return i;
+            i++;
         }
-        if (i >= 3) {
+        if (i == 3) {
             printf("Fuck off, looser");
             return 84;
         }
-    }
     return 0;
 }
