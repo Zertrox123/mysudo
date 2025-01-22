@@ -8,7 +8,7 @@
 #include "my.h"
 #include "my_sudo.h"
 
-int basic_sudo(char ac, char **av)
+int basic_sudo(char ac, char **ev)
 {
     return 0;
 }

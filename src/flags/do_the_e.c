@@ -8,12 +8,9 @@
 #include <stdio.h>
 #include "my.h"
 
+/*command for the E*/
+
 int do_the_e(void)
 {
-    extern char **environ;
-
-    for (char **env = environ; *env != 0; env++) {
-        printf("%s\n", *env);
-    }
     return 0;
 }
