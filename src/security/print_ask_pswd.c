@@ -8,13 +8,9 @@
 #include "my.h"
 #include "my_sudo.h"
 
-#include "my.h"
-#include "my_sudo.h"
-#include <unistd.h>
-
 void ask_psswd(void)
 {
-    char *username = getlogin();
+    char *username = getuid();
 
     if (!username) {
         return;
