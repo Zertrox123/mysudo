@@ -10,5 +10,5 @@
 
 int basic_sudo(char ac, char **ev)
 {
-    return 0;
+    ask_psswd();
 }

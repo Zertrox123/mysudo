@@ -10,10 +10,11 @@
 
 void ask_psswd(void)
 {
-    char *username = getuid();
+    char username;
 
     if (!username) {
         return;
     }
     mini_printf("[my_sudo] password for %s: ", username);
+    return;
 }
