@@ -5,7 +5,7 @@
 ** my_sudo
 */
 
-#include "my.h"
+#include "include/my.h"
 #include "my_sudo.h"
 
 int main(int argc, char *argv[], int ac, char **ev)

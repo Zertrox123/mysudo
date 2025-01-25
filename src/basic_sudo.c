@@ -8,7 +8,7 @@
 #include "my.h"
 #include "my_sudo.h"
 
-int basic_sudo(char ac, char **ev)
+int basic_sudo(int ac, char **ev)
 {
-    ask_psswd();
+    return 0;
 }
