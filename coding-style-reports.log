@@ -1,3 +1,0 @@
-./src/get_shadow.c:117: MINOR:C-L4
-./src/security/read_security.c:61: MINOR:C-L4
-./src/security/read_security.c:73: INFO:C-A3
