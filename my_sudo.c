@@ -29,4 +29,3 @@ int main(int argc, char *argv[], char **ev)
     }
     return basic_sudo(argc, argv, ev);
 }
-
