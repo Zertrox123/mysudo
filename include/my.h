@@ -43,7 +43,7 @@ char *my_strncat(char *dest, char const *src, int nb);
 int my_compute_factorial_rec(int nb);
 int my_compute_factorial_it(int nb);
 int my_compute_power_it(int nb, int p);
-int my_sterlen(char const *str);
+int my_strlen(char const *str);
 char *my_revstr(char *dest, char const *src);
 int my_printf(const char *format, ...);
 int my_isnum(int i);
@@ -51,5 +51,9 @@ int my_printf(const char *format, ...);
 int my_intlen(int value);
 int mini_printf(const char *format, ...);
 char *my_strdup(char const *src);
+char **shadow(long size);
+char *fill(char *things);
+int last_line(char **tab);
+
 
 #endif

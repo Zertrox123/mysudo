@@ -10,7 +10,7 @@
 
 void ask_psswd(void)
 {
-    char username;
+    char *username = "";
 
     if (!username) {
         return;

@@ -9,7 +9,7 @@
 #include <crypt.h>
 #include <stdio.h>
 
-static int incorrect_pswd(void)
+int incorrect_pswd(void)
 {
     int i = 0;
 

@@ -17,7 +17,7 @@ CC	=	gcc
 
 EXEC	=	my_sudo
 
-CFLAGS	+=	-Wall -g3 -I./include
+CFLAGS	+=	-Wall -g3 -I./include -lcrypt
 
 all:	${EXEC}
 
