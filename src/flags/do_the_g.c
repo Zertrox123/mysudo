@@ -5,12 +5,13 @@
 ** do_the_g
 */
 
+#include "my.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
 
-int do_the_g(void)
+int do_the_g(char *argv)
 {
     int llp = open("/etc/group", O_RONDLY);
     char *buffinou = malloc(sizeof(char)*1024);
@@ -19,5 +20,15 @@ int do_the_g(void)
 
     stat("/etc/group", s);
     read(llp, buffinou, s.st_size);
+    tab = my_str_to_word_array(buffinou);
+    for (int i = 0; tab[i] != NULL; i++) {
+        if (my_strncmp(argv, tab[i], my_strlen(argv)) == 1) {
+            /*omar*/
+            return 0;
+        } else {
+            printf("sudo: unknow group");
+            return 0;
+        }
+    }
     return 0;
 }

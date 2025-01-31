@@ -10,7 +10,7 @@
 
 int do_the_h(void);
 int do_the_e(void);
-int do_the_g(void);
+int do_the_g(char *argv);
 int do_the_s(void);
 int do_the_u(void);
 int basic_sudo(int ac, char **argv, char **ev);
