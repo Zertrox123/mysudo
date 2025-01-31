@@ -14,12 +14,10 @@ int do_the_g(void)
 {
     int llp = open("/etc/group", O_RONDLY);
     char *buffinou = malloc(sizeof(char)*1024);
+    char **tab;
     struct stat s;
 
     stat("/etc/group", s);
     read(llp, buffinou, s.st_size);
-    for (i = 0; buffinou[i] != '\0'; i++) {
-        return 0;
-    }
     return 0;
 }
