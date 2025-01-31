@@ -12,19 +12,19 @@ int main(int argc, char *argv[], char **ev)
 {
     for (int i = 1; i < argc; i++) {
         if (my_strcmp(argv[i], "-h") == 0) {
-            do_the_h();
+            return do_the_h();
         }
         if (my_strcmp(argv[i], "-u") == 0) {
-            do_the_u();
+            return do_the_u();
         }
         if (my_strcmp(argv[i], "-g") == 0) {
-            do_the_g();
+            return do_the_g();
         }
         if (my_strcmp(argv[i], "-E") == 0) {
-            do_the_e();
+            return do_the_e();
         }
         if (my_strcmp(argv[i], "-s") == 0) {
-            do_the_s();
+            return do_the_s();
         }
     }
     return basic_sudo(argc, argv, ev);
