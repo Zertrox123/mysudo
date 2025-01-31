@@ -10,15 +10,16 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <sys/stat.h>
 
 int do_the_g(char *argv)
 {
-    int llp = open("/etc/group", O_RONDLY);
+    int llp = open("/etc/group", O_RDONLY);
     char *buffinou = malloc(sizeof(char)*1024);
     char **tab;
     struct stat s;
 
-    stat("/etc/group", s);
+    stat("/etc/group", &s);
     read(llp, buffinou, s.st_size);
     tab = my_str_to_word_array(buffinou);
     for (int i = 0; tab[i] != NULL; i++) {
