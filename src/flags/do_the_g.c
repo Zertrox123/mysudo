@@ -24,7 +24,6 @@ int do_the_g(char *argv)
     tab = my_str_to_word_array(buffinou);
     for (int i = 0; tab[i] != NULL; i++) {
         if (my_strncmp(argv, tab[i], my_strlen(argv)) == 1) {
-            /*omar*/
             return 0;
         } else {
             printf("Sudo: unknown group");

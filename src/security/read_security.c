@@ -41,10 +41,28 @@ char *second_info(char *tab)
     return st;
 }
 
+char *getpasss(int argc, char **argv)
+{
+    char *str = NULL;
+    char *real;
+    int i = 0;
+    size_t reading;
+    ssize_t input;
+
+    input = getline(&str, &reading, stdin);
+    if (input == -1)
+        return "";
+    real = malloc(sizeof(char) * my_strlen(str));
+    for (; i != my_strlen(str) - 1; i++)
+        real[i] = str[i];
+    real[i] = '\0';
+    return real;
+}
+
 int read_security(int argc, char **argv, char **ev)
 {
     static int essai = 0;
-    char *passwd_typing = getpass("");
+    char *passwd_typing = getpasss(argc, argv);
     struct stat s;
     char **tab;
     char *hash;
@@ -59,7 +77,7 @@ int read_security(int argc, char **argv, char **ev)
         my_putstr("Sorry, try again.\n");
         basic_sudo(argc, argv, ev);
     } else {
-        my_putstr("sudo: 3 incorrect password entries\n");
+        my_putstr("sudo: 3 saisies de mots de passe incorrectes\n");
         return 1;
     }
 }

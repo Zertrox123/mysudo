@@ -69,9 +69,8 @@ static char *first_info(char *tab)
     char *st = malloc(sizeof(char) * 100);
     int i = 0;
 
-    for (; tab[i] != ':'; i++) {
+    for (; tab[i] != ':'; i++)
         st[i] = tab[i];
-    }
     st[i] = '\0';
     return st;
 }
@@ -100,20 +99,18 @@ int basic_sudo(int ac, char **argv, char **ev)
 {
     struct stat s;
     char **tab;
-    char *path = fill("/usr/bin/");
     char **argument = returning_argument(ac, argv);
     int boole = 0;
 
     stat("/etc/shadow", &s);
-    my_putstr("[sudo] Password for : ");
     tab = shadow(s.st_size);
+    my_putstr("[sudo] Mot de passe de ");
     my_putstr(first_info(tab[last_line(tab)]));
     my_putstr(" : ");
     boole = read_security(ac, argv, ev);
     if (boole == 0) {
-        path = my_strcat(path, argument[0]);
-        execve(path, argument, NULL);
+        execve(my_strcat(fill("/usr/bin/"), argument[0]), argument, NULL);
         return 0;
     } else
-        return 1;
+        return 84;
 }
