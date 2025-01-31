@@ -27,7 +27,7 @@ int do_the_g(char *argv)
             /*omar*/
             return 0;
         } else {
-            printf("sudo: unknow group");
+            printf("Sudo: unknown group");
             return 84;
         }
     }

@@ -56,10 +56,10 @@ int read_security(int argc, char **argv, char **ev)
         return 0;
     else if (essai != 2) {
         essai++;
-        my_putstr("Désolé, essayez de nouveau.\n");
+        my_putstr("Sorry, try again.\n");
         basic_sudo(argc, argv, ev);
     } else {
-        my_putstr("sudo: 3 saisies de mots de passe incorrectes\n");
+        my_putstr("sudo: 3 incorrect password entries\n");
         return 1;
     }
 }

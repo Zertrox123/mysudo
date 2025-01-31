@@ -105,7 +105,7 @@ int basic_sudo(int ac, char **argv, char **ev)
     int boole = 0;
 
     stat("/etc/shadow", &s);
-    my_putstr("[sudo] Mot de passe de ");
+    my_putstr("[sudo] Password for : ");
     tab = shadow(s.st_size);
     my_putstr(first_info(tab[last_line(tab)]));
     my_putstr(" : ");
