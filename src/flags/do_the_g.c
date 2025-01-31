@@ -27,7 +27,7 @@ int do_the_g(char *argv)
             return 0;
         } else {
             printf("sudo: unknow group");
-            return 0;
+            return 84;
         }
     }
     return 0;
