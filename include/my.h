@@ -54,6 +54,7 @@ char *my_strdup(char const *src);
 char **shadow(long size);
 char *fill(char *things);
 int last_line(char **tab);
+char **my_str_to_word_array(char const *str);
 
 
 #endif
