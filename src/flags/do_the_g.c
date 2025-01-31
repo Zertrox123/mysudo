@@ -7,11 +7,19 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
 
 int do_the_g(void)
 {
-    gid_t gid = getgid();
+    int llp = open("/etc/group", O_RONDLY);
+    char *buffinou = malloc(sizeof(char)*1024);
+    struct stat s;
 
-    printf("Current Group ID: %d\n", gid);
+    stat("/etc/group", s);
+    read(llp, buffinou, s.st_size);
+    for (i = 0; buffinou[i] != '\0'; i++) {
+        return 0;
+    }
     return 0;
 }
