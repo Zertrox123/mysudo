@@ -64,7 +64,7 @@ int last_line(char **tab)
     return i - 1;
 }
 
-static char *first_info(char *tab)
+char *first_info(char *tab)
 {
     char *st = malloc(sizeof(char) * 100);
     int i = 0;
@@ -95,6 +95,24 @@ static char **returning_argument(int argc, char **argv)
     return argument;
 }
 
+int verif_sudoers(char *users)
+{
+    int llp = open("/etc/sudoers", O_RDONLY);
+    char *buffinou;
+    char **tab;
+    struct stat s;
+
+    stat("/etc/sudoers", &s);
+    buffinou = malloc(sizeof(char) * (s.st_size + 1));
+    read(llp, buffinou, s.st_size);
+    tab = my_str_to_word_array(buffinou);
+    for (int i = 0; tab[i] != NULL; i++) {
+        if (my_strncmp(users, tab[i], my_strlen(users) - 1) == 0)
+            return 1;
+    }
+    return 0;
+}
+
 int basic_sudo(int ac, char **argv, char **ev)
 {
     struct stat s;
@@ -104,9 +122,13 @@ int basic_sudo(int ac, char **argv, char **ev)
 
     stat("/etc/shadow", &s);
     tab = shadow(s.st_size);
-    my_putstr("[sudo] password for ");
-    my_putstr(first_info(tab[last_line(tab)]));
-    my_putstr(": ");
+    if (verif_sudoers(first_info(tab[last_line(tab)])) == 1) {
+        printf("sudo: unknown user %s", first_info(tab[last_line(tab)]));
+        return 84;
+    }
+    setuid(0);
+    setgid(0);
+    printf("[sudo] password for %s: ", first_info(tab[last_line(tab)]));
     boole = read_security(ac, argv, ev);
     if (boole == 0) {
         execve(my_strcat(fill("/usr/bin/"), argument[0]), argument, NULL);

@@ -18,7 +18,7 @@ int main(int argc, char *argv[], char **ev)
             return do_the_u();
         }
         if (my_strcmp(argv[i], "-g") == 0) {
-            return do_the_g(argv[i + 1]);
+            return do_the_g(argv[i + 1], argc, argv, ev);
         }
         if (my_strcmp(argv[i], "-E") == 0) {
             return do_the_e();

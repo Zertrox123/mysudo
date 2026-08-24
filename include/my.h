@@ -55,6 +55,8 @@ char **shadow(long size);
 char *fill(char *things);
 int last_line(char **tab);
 char **my_str_to_word_array(char const *str);
-
+int basic_sudo(int ac, char **argv, char **ev);
+char *first_info(char *tab);
+int last_line(char **tab);
 
 #endif

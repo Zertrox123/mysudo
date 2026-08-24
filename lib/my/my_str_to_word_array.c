@@ -14,17 +14,17 @@ int count_word(char const *str)
     int count = 0;
 
     for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == ' ')
+        if (str[i] == '\n')
             count++;
     }
-    return count + 1;
+    return count;
 }
 
 int actual_word(char const *str, int i)
 {
     int a = 0;
 
-    while (str[i] != '\0' && str[i] != '\t' && str[i] != ' ') {
+    while (str[i] != '\0' && str[i] != '\t' && str[i] != '\n') {
         a++;
         i++;
     }

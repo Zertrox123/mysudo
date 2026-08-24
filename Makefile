@@ -23,6 +23,8 @@ all:	${EXEC}
 
 $(EXEC):	${OBJ}
 	$(CC) -o $(EXEC) $(OBJ) $(CFLAGS)
+	sudo chown root:root $(EXEC)
+	sudo chmod +s $(EXEC)
 
 clean:
 	rm -f vgcore.* $(OBJ) *.gch

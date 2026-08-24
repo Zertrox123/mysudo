@@ -21,18 +21,3 @@ char *my_strdup(char const *src)
     str[i] = '\0';
     return str;
 }
-
-/*
-char *my_strdup(char const *src)
-{
-    int size = my_strlen(src);
-    char *str = malloc(sizeof(char) * (size + 1));
-    int i = 0;
-
-    for (i = 0; src[i] != '\0'; i++)
-        str[i] = src[i];
-    str[i] = '\0';
-    my_putstr(str);
-    return str;
-}
-*/
